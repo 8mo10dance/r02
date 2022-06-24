@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -30,5 +30,8 @@ module Webapp
         resource '*', methods: %i[get], headers: :any
       end
     end
+
+    # 一時的措置
+    config.action_controller.allow_forgery_protection = false
   end
 end
